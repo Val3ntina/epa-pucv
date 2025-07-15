@@ -152,29 +152,29 @@ h2 {
 .ramo h4 {
     margin: 0 0 5px 0;
     font-size: 1.1em;
-    color: #333;
+    color: #333; /* Color de texto por defecto, se ajustará en dark mode */
 }
 
 .ramo p {
     margin: 0;
     font-size: 0.9em;
-    color: #666;
+    color: #666; /* Color de texto por defecto, se ajustará en dark mode */
 }
 
 .ramo .sigla {
     font-weight: bold;
-    color: #444;
+    color: #444; /* Color de texto por defecto, se ajustará en dark mode */
 }
 
 .ramo .creditos {
     font-style: italic;
     font-size: 0.85em;
-    color: #777;
+    color: #777; /* Color de texto por defecto, se ajustará en dark mode */
 }
 
 .prerrequisitos-text {
     font-size: 0.75em;
-    color: #888;
+    color: #888; /* Color de texto por defecto, se ajustará en dark mode */
     margin-top: 5px;
 }
 
@@ -187,22 +187,22 @@ h2 {
 }
 
 .ramo.bloqueado .status-icon {
-    color: #e91e63; /* Rosa fuerte para bloqueado */
+    color: #e91e63; /* Rosa fuerte para bloqueado, se mantiene */
 }
 
 .ramo.desbloqueado .status-icon {
-    color: #2196f3; /* Azul para desbloqueado */
+    color: #2196f3; /* Azul para desbloqueado, se mantiene */
 }
 
 .ramo.aprobado .status-icon {
-    color: #4CAF50; /* Verde para aprobado */
+    color: #6c757d; /* Gris oscuro para aprobado, para contrastar con el fondo gris pastel */
 }
 
 /* Clases de estado de los ramos */
 .ramo.bloqueado {
-    background-color: #F2DDE4; /* Light Pink from palette */
-    color: #aaa;
-    border-color: #DDC6E7; /* Lighter Purple/Pink from palette */
+    background-color: #F2DDE4; /* Rosa claro de la paleta para bloqueado */
+    color: #aaa; /* Texto atenuado */
+    border-color: #DDC6E7; /* Borde que complementa */
     cursor: not-allowed;
     opacity: 0.7;
 }
@@ -213,16 +213,16 @@ h2 {
 
 .ramo.desbloqueado {
     /* El color de fondo se establecerá por la clase de tipo de formación */
-    border-color: #C6DDE7; /* Lighter Blue/Grey from palette */
+    border-color: #C6DDE7; /* Borde que complementa la paleta */
     cursor: pointer;
     opacity: 1;
     pointer-events: auto; /* Permite clics */
 }
 
 .ramo.aprobado {
-    background-color: #D4EDDA; /* Verde pálido para aprobado, se mantiene */
-    color: #5cb85c;
-    border-color: #C3E6CB;
+    background-color: #EBE5D8; /* Gris pastel de la paleta para aprobado */
+    color: #6c757d; /* Texto gris oscuro para contraste */
+    border-color: #DCDCDC; /* Borde gris más oscuro */
     text-decoration: line-through;
     opacity: 0.8;
     cursor: default; /* Cambiado a default, ya que el checkbox estará deshabilitado */
@@ -235,15 +235,16 @@ h2 {
     cursor: default;
 }
 
-/* Colores por tipo de formación (pasteles de la paleta) */
+/* Colores por tipo de formación (NUEVA ASIGNACIÓN de la paleta) */
 .formacion-fundamental { background-color: #F8F4ED; } /* Very Light Cream */
 .linea-practica { background-color: #B29EDD; } /* Medium Purple */
 .psicologia { background-color: #F2DDE4; } /* Light Pink */
-.didactica { background-color: #C6DDE7; } /* Lighter Blue/Grey */
+.didactica { background-color: #C6DDE7; } /* Light Blue/Grey */
 .lenguaje { background-color: #9EC2DD; } /* Medium Blue */
-.investigacion { background-color: #EBE5D8; } /* Light Beige/Grey */
+.investigacion { background-color: #EBE5D8; } /* Light Beige/Grey (usado también para aprobado, pero con texto diferente) */
 .optativo { background-color: #F8EBE5; } /* Very Light Peach */
-.otros { background-color: #DDC6E7; } /* Lighter Purple/Pink */
+.otros { background-color: #E7C6E7; } /* Light Purple/Pink */
+
 
 /* Estilos para el checkbox de aprobación */
 .checkbox-container {
@@ -262,12 +263,12 @@ h2 {
 
 .checkbox-container label {
     font-size: 0.9em;
-    color: #555;
+    color: #555; /* Color de texto por defecto, se ajustará en dark mode */
     cursor: pointer;
 }
 
 .ramo.aprobado .checkbox-container label {
-    color: #5cb85c; /* Color verde para el texto del checkbox si está aprobado */
+    color: #6c757d; /* Gris oscuro para el texto del checkbox si está aprobado */
 }
 
 /* Resaltado de dependencias al pasar el ratón */
@@ -294,13 +295,13 @@ h2 {
     border: none;
     cursor: pointer;
     font-size: 1em;
-    color: #888;
+    color: #888; /* Color de icono por defecto, se ajustará en dark mode */
     transition: color 0.2s ease;
     pointer-events: auto; /* Asegura que el botón de notas siempre sea clickeable */
 }
 
 .notes-toggle:hover {
-    color: #555;
+    color: #555; /* Color de icono al pasar el ratón, se ajustará en dark mode */
 }
 
 .notes-input {
@@ -315,6 +316,8 @@ h2 {
     display: none; /* Oculto por defecto */
     transition: all 0.3s ease;
     pointer-events: auto; /* Asegura que el textarea sea editable */
+    background-color: #f8f8f8; /* Fondo claro para la nota */
+    color: #333; /* Texto oscuro para la nota */
 }
 
 .notes-input.active {
@@ -352,16 +355,13 @@ body.dark-mode .ramo:hover:not(.aprobado):not(.bloqueado) {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
 }
 
-body.dark-mode .ramo h4 {
-    color: #f0f0f0;
-}
-
+body.dark-mode .ramo h4,
 body.dark-mode .ramo p,
 body.dark-mode .ramo .sigla,
 body.dark-mode .ramo .creditos,
 body.dark-mode .prerrequisitos-text,
 body.dark-mode .checkbox-container label {
-    color: #c0c0c0;
+    color: #f0f0f0; /* Texto más claro en modo oscuro */
 }
 
 body.dark-mode .ramo.bloqueado {
@@ -375,9 +375,9 @@ body.dark-mode .ramo.bloqueado .checkbox-container input[type="checkbox"] + labe
 }
 
 body.dark-mode .ramo.aprobado {
-    background-color: #3b5a3f; /* Verde oscuro para aprobado */
-    border-color: #4c6a50;
-    color: #90ee90;
+    background-color: #4a4a4a; /* Gris oscuro para aprobado en modo oscuro */
+    border-color: #5a5a5a;
+    color: #b0b0b0; /* Texto más claro */
 }
 
 body.dark-mode .ramo .status-icon {
@@ -419,9 +419,9 @@ body.dark-mode .notes-toggle:hover {
 }
 
 body.dark-mode .notes-input {
-    background-color: #555555;
-    color: #e0e0e0;
-    border-color: #777777;
+    background-color: #666666; /* Fondo de nota más oscuro */
+    color: #e0e0e0; /* Texto de nota más claro */
+    border-color: #888888;
 }
 
 /* Ajustes para dispositivos móviles */
