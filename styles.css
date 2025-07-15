@@ -104,7 +104,7 @@ h2 {
 
 /* Estilos para cada bloque de semestre */
 .semestre {
-    background-color: #ffffff;
+    background-color: #ffffff; /* Fondo del bloque semestre, se mantiene blanco */
     border-radius: 10px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada */
     padding: 20px;
@@ -151,14 +151,14 @@ h2 {
 
 .ramo h4 {
     margin: 0 0 5px 0;
-    font-size: 1.1em;
     color: #333; /* Color de texto por defecto, se ajustará en dark mode */
+    font-size: 1.1em;
 }
 
 .ramo p {
     margin: 0;
-    font-size: 0.9em;
     color: #666; /* Color de texto por defecto, se ajustará en dark mode */
+    font-size: 0.9em;
 }
 
 .ramo .sigla {
@@ -168,8 +168,8 @@ h2 {
 
 .ramo .creditos {
     font-style: italic;
-    font-size: 0.85em;
     color: #777; /* Color de texto por defecto, se ajustará en dark mode */
+    font-size: 0.85em;
 }
 
 .prerrequisitos-text {
@@ -212,7 +212,7 @@ h2 {
 }
 
 .ramo.desbloqueado {
-    /* El color de fondo se establecerá por la clase de tipo de formación */
+    /* El color de fondo se establecerá por la clase de semestre */
     border-color: #C6DDE7; /* Borde que complementa la paleta */
     cursor: pointer;
     opacity: 1;
@@ -235,15 +235,17 @@ h2 {
     cursor: default;
 }
 
-/* Colores por tipo de formación (NUEVA ASIGNACIÓN de la paleta) */
-.formacion-fundamental { background-color: #F8F4ED; } /* Very Light Cream */
-.linea-practica { background-color: #B29EDD; } /* Medium Purple */
-.psicologia { background-color: #F2DDE4; } /* Light Pink */
-.didactica { background-color: #C6DDE7; } /* Light Blue/Grey */
-.lenguaje { background-color: #9EC2DD; } /* Medium Blue */
-.investigacion { background-color: #EBE5D8; } /* Light Beige/Grey (usado también para aprobado, pero con texto diferente) */
-.optativo { background-color: #F8EBE5; } /* Very Light Peach */
-.otros { background-color: #E7C6E7; } /* Light Purple/Pink */
+/* Colores por semestre (NUEVA ASIGNACIÓN de la paleta) */
+.semestre-1-color { background-color: #DDC6E7; } /* Púrpura claro */
+.semestre-2-color { background-color: #F8EBE5; } /* Durazno suave */
+.semestre-3-color { background-color: #C6DDE7; } /* Azul cielo claro */
+.semestre-4-color { background-color: #E0F7FA; } /* Verde menta pálido (similar a tu anterior) */
+.semestre-5-color { background-color: #F8F4ED; } /* Crema amarillo */
+.semestre-6-color { background-color: #F2DDE4; } /* Rosa suave */
+.semestre-7-color { background-color: #AFCDE7; } /* Azul grisáceo suave */
+.semestre-8-color { background-color: #E6E6FA; } /* Lavanda claro */
+.semestre-9-color { background-color: #FFEFD5; } /* Naranja/Coral muy pálido */
+.semestre-10-color { background-color: #EBE5D8; } /* Beige suave (similar al aprobado) */
 
 
 /* Estilos para el checkbox de aprobación */
@@ -457,3 +459,4 @@ body.dark-mode .notes-input {
         font-size: 0.8em;
     }
 }
+
