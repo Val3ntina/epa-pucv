@@ -1,7 +1,7 @@
 /* Estilos generales para el cuerpo de la página */
 body {
     font-family: 'Inter', sans-serif; /* Nueva fuente para el texto principal */
-    background-color: #F4F4F4; /* Fondo pastel claro como solicitado */
+    background-color: #F4F4F4; /* Fondo pastel claro como solicitado, se mantiene */
     margin: 0;
     padding: 0;
     color: #333;
@@ -11,7 +11,7 @@ body {
 
 /* Estilos para el encabezado de la página */
 header {
-    background-color: #add8e6; /* Azul cielo suave */
+    background-color: #add8e6; /* Azul cielo suave, se mantiene */
     color: white;
     padding: 20px 0;
     text-align: center;
@@ -48,7 +48,7 @@ h2 {
 }
 
 .control-button {
-    background-color: #6a9ac4; /* Azul un poco más oscuro */
+    background-color: #6a9ac4; /* Azul un poco más oscuro, se mantiene */
     color: white;
     border: none;
     padding: 10px 20px;
@@ -80,9 +80,9 @@ h2 {
 }
 
 .progress-bar {
+    background-color: #4CAF50; /* Verde para el progreso, se mantiene */
     height: 100%;
     width: 0%;
-    background-color: #4CAF50; /* Verde para el progreso */
     border-radius: 15px;
     display: flex;
     align-items: center;
@@ -200,12 +200,11 @@ h2 {
 
 /* Clases de estado de los ramos */
 .ramo.bloqueado {
-    background-color: #fce4ec; /* Rosa muy pálido para bloqueado */
+    background-color: #F2DDE4; /* Light Pink from palette */
     color: #aaa;
-    border-color: #f4c2d6;
+    border-color: #DDC6E7; /* Lighter Purple/Pink from palette */
     cursor: not-allowed;
     opacity: 0.7;
-    /* Eliminado pointer-events: none; de aquí para permitir clic en notas */
 }
 
 .ramo.bloqueado .checkbox-container input[type="checkbox"] + label {
@@ -214,38 +213,37 @@ h2 {
 
 .ramo.desbloqueado {
     /* El color de fondo se establecerá por la clase de tipo de formación */
-    border-color: #b3e0f2; /* Borde azul claro por defecto para desbloqueado */
+    border-color: #C6DDE7; /* Lighter Blue/Grey from palette */
     cursor: pointer;
     opacity: 1;
     pointer-events: auto; /* Permite clics */
 }
 
 .ramo.aprobado {
-    background-color: #d4edda; /* Verde pálido para aprobado */
+    background-color: #D4EDDA; /* Verde pálido para aprobado, se mantiene */
     color: #5cb85c;
-    border-color: #c3e6cb;
+    border-color: #C3E6CB;
     text-decoration: line-through;
     opacity: 0.8;
     cursor: default; /* Cambiado a default, ya que el checkbox estará deshabilitado */
-    /* Eliminado pointer-events: none; de aquí para permitir clic en notas */
 }
 
-/* **NUEVA REGLA:** Deshabilita solo el checkbox en ramos aprobados */
+/* Deshabilita solo el checkbox en ramos aprobados */
 .ramo.aprobado .checkbox-container input[type="checkbox"],
 .ramo.aprobado .checkbox-container label {
     pointer-events: none; /* Evita clics en el checkbox y su label */
     cursor: default;
 }
 
-/* Colores por tipo de formación (pasteles) */
-.formacion-fundamental { background-color: #fffacd; } /* Limón Chiffon */
-.linea-practica { background-color: #e6e6fa; } /* Lavanda */
-.psicologia { background-color: #ffe4e1; } /* Rosa Niebla */
-.didactica { background-color: #f0f8ff; } /* Azul Alicia */
-.lenguaje { background-color: #f0fff0; } /* Menta Crema */
-.investigacion { background-color: #dcdcdc; } /* Gris Gana */
-.optativo { background-color: #ffdab9; } /* Durazno Pálido */
-.otros { background-color: #f5f5dc; } /* Beige */
+/* Colores por tipo de formación (pasteles de la paleta) */
+.formacion-fundamental { background-color: #F8F4ED; } /* Very Light Cream */
+.linea-practica { background-color: #B29EDD; } /* Medium Purple */
+.psicologia { background-color: #F2DDE4; } /* Light Pink */
+.didactica { background-color: #C6DDE7; } /* Lighter Blue/Grey */
+.lenguaje { background-color: #9EC2DD; } /* Medium Blue */
+.investigacion { background-color: #EBE5D8; } /* Light Beige/Grey */
+.optativo { background-color: #F8EBE5; } /* Very Light Peach */
+.otros { background-color: #DDC6E7; } /* Lighter Purple/Pink */
 
 /* Estilos para el checkbox de aprobación */
 .checkbox-container {
@@ -298,7 +296,7 @@ h2 {
     font-size: 1em;
     color: #888;
     transition: color 0.2s ease;
-    pointer-events: auto; /* **IMPORTANTE:** Asegura que el botón de notas siempre sea clickeable */
+    pointer-events: auto; /* Asegura que el botón de notas siempre sea clickeable */
 }
 
 .notes-toggle:hover {
