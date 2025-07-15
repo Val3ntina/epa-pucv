@@ -228,22 +228,23 @@ h2 {
     cursor: default; /* Cambiado a default, ya que el checkbox estará deshabilitado */
 }
 
-/* Deshabilita solo el checkbox en ramos aprobados */
-.ramo.aprobado .checkbox-container input[type="checkbox"],
-.ramo.aprobado .checkbox-container label {
+/* Deshabilita solo el checkbox en ramos bloqueados, no en aprobados */
+.ramo.bloqueado .checkbox-container input[type="checkbox"],
+.ramo.bloqueado .checkbox-container label {
     pointer-events: none; /* Evita clics en el checkbox y su label */
     cursor: default;
 }
 
 /* Colores por semestre (NUEVA ASIGNACIÓN de la paleta) */
-.semestre-1-color { background-color: #DDC6E7; } /* Púrpura claro */
+/* Usando tonos de la paleta proporcionada y complementarios */
+.semestre-1-color { background-color: #D2C8E7; } /* Un lavanda/morado pastel más suave */
 .semestre-2-color { background-color: #F8EBE5; } /* Durazno suave */
 .semestre-3-color { background-color: #C6DDE7; } /* Azul cielo claro */
-.semestre-4-color { background-color: #E0F7FA; } /* Verde menta pálido (similar a tu anterior) */
-.semestre-5-color { background-color: #F8F4ED; } /* Crema amarillo */
+.semestre-4-color { background-color: #F8F4ED; } /* Crema amarillo */
+.semestre-5-color { background-color: #AFCDE7; } /* Azul grisáceo suave */
 .semestre-6-color { background-color: #F2DDE4; } /* Rosa suave */
-.semestre-7-color { background-color: #AFCDE7; } /* Azul grisáceo suave */
-.semestre-8-color { background-color: #E6E6FA; } /* Lavanda claro */
+.semestre-7-color { background-color: #B29EDD; } /* Púrpura medio (anteriormente linea-practica) */
+.semestre-8-color { background-color: #E6E6FA; } /* Lavanda claro (anteriormente en la lista de pasteles) */
 .semestre-9-color { background-color: #FFEFD5; } /* Naranja/Coral muy pálido */
 .semestre-10-color { background-color: #EBE5D8; } /* Beige suave (similar al aprobado) */
 
