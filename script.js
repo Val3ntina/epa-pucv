@@ -135,6 +135,17 @@ document.addEventListener('DOMContentLoaded', () => {
         totalCreditos += ramo.creditos;
     });
 
+    // Agrupar ramos por semestre para facilitar la renderización
+    // ESTA ES LA DEFINICIÓN QUE FALTABA MOVER ARRIBA
+    const semestresAgrupados = ramosData.reduce((acc, ramo) => {
+        if (!acc[ramo.semestre]) {
+            acc[ramo.semestre] = [];
+        }
+        acc[ramo.semestre].push(ramo);
+        return acc;
+    }, {});
+
+
     /**
      * Carga el estado de los ramos aprobados, notas y modo oscuro desde localStorage.
      */
@@ -227,7 +238,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 } else if (isBlocked) {
                     statusIcon = '<i class="fas fa-lock status-icon"></i>';
                 } else {
-                    statusIcon = '<i class="fas fa-unlock status-icon"></i>';
+                    statusIcon = '<i class="fas fa-unlock-alt status-icon"></i>'; // Cambiado a unlock-alt para mejor visibilidad
                 }
 
                 // Generar el texto de los prerrequisitos si existen
