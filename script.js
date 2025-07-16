@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
         { semestre: 5, nombre: 'Taller de Integración Curricular 4: Curriculum Cultural', sigla: 'EPA 1160', creditos: 2, prerrequisitos: ['EPA 1151'], tipo: 'linea-practica' },
         { semestre: 5, nombre: 'Estrategias Discursivas para Comunicar y Enseñar el Conocimiento Disciplinar', sigla: 'LCL 465', creditos: 2, prerrequisitos: [], tipo: 'lenguaje' },
         { semestre: 5, nombre: 'Formación Fundamental 2', sigla: 'FF 2', creditos: 2, prerrequisitos: [], tipo: 'formacion-fundamental' },
-        { semestre: 5, nombre: 'Optativo (Diseño y Evaluación de Recursos Didácticos y Espacios Educativos Para el Aula Infantil)', sigla: 'EPE 3468', creditos: 3, prerrequisitos: [], tipo: 'optativo', observaciones: 'EL OPTATIVO VARIA SEGUN LA PERSONA' },
+        { semestre: 5, nombre: 'Optativo', sigla: 'O1', creditos: 3, prerrequisitos: [], tipo: 'optativo', observaciones: 'EL OPTATIVO VARIA SEGUN LA PERSONA' },
 
         // Semestre 6
         { semestre: 6, nombre: 'Desarrollo del Pensamiento Matemático', sigla: 'EPA 1166', creditos: 2, prerrequisitos: ['EPA 1150'], tipo: 'didactica' },
